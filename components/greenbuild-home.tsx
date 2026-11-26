@@ -453,7 +453,7 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 Nutec Masters. All rights reserved.</span>
-        <span>DESIGNED AND BUILT BY TAKUDZWA MBANO <a href="tel:+919588511784">+919588511784</a> · <a href="mailto:mbanotakudzwa2001@gmail.com">EMAIL</a></span>
+        <span>DESIGNED AND BUILT BY TK MBAX <a href="tel:+263714913385">0714913385</a></span>
       </div>
     </footer>
   )
