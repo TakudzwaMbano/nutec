@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MotionLink, Reveal } from '@/components/motion-primitives'
 import { WhatsAppIcon } from '@/components/whatsapp-icon'
+import { ServiceWhyChoose } from '@/components/service-detail-page'
 
 const plumbingImages = [
   { src: '/images/plumbing1.jpeg', alt: 'Plumbing work completed by Nutec Masters' },
@@ -36,7 +37,7 @@ export default function PlumbingPage() {
             <p>Expert plumbing installation and repairs for residential and commercial properties across Cape Town and the Western Cape.</p>
             <div className="plumbing-actions">
               <MotionLink href="/#contact" className="button button-dark">REQUEST A QUOTE <span aria-hidden="true">↗</span></MotionLink>
-              <a href="tel:+27719012337" className="text-link">CALL +27 71 901 2337 <span aria-hidden="true">→</span></a>
+              <a href="tel:+27751079569" className="text-link">CALL 075 107 9569 <span aria-hidden="true">→</span></a>
             </div>
           </Reveal>
           <Reveal className="plumbing-hero-image-wrap" delay={0.12}>
@@ -69,6 +70,8 @@ export default function PlumbingPage() {
           </div>
         </section>
 
+        <ServiceWhyChoose />
+
         <section className="plumbing-contact">
           <Reveal>
             <p className="eyebrow eyebrow-light">LET&apos;S DISCUSS YOUR PROJECT</p>
@@ -85,7 +88,7 @@ export default function PlumbingPage() {
           <span className="brand-logo-frame"><img className="brand-logo" src="/logos/logo.jpeg" alt="Nutec Masters" /></span>
         </Link>
         <MotionLink href="/#services">BACK TO ALL SERVICES <span aria-hidden="true">→</span></MotionLink>
-        <a className="whatsapp-footer-link" href="https://wa.me/263785013326" target="_blank" rel="noreferrer"><WhatsAppIcon />+263 78 501 3326</a>
+        <a className="whatsapp-footer-link" href="https://wa.me/27751079569" target="_blank" rel="noreferrer"><WhatsAppIcon />075 107 9569</a>
         <span>© 2026 Nutec Masters. All rights reserved.</span>
       </footer>
     </div>

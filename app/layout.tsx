@@ -1,5 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { PriceGuideEdgeButton } from '@/components/price-guide-edge-button'
+import { WhatsAppIcon } from '@/components/whatsapp-icon'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -26,6 +28,16 @@ export default function RootLayout({
     <html lang="en-ZA">
       <body className="antialiased">
         {children}
+        <PriceGuideEdgeButton />
+        <a
+          className="whatsapp-edge-button"
+          href="https://wa.me/27751079569"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chat with Nutec Masters on WhatsApp"
+        >
+          <WhatsAppIcon />
+        </a>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

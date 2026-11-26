@@ -7,22 +7,22 @@ import { Reveal, staggerItemVariants, StaggerGroup } from '@/components/motion-p
 import { WhatsAppIcon } from '@/components/whatsapp-icon'
 
 const photos = {
-  hero: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=85',
-  intro: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85',
-  nutec: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80',
-  wendy: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=80',
+  hero: '/nutec/nutec cover pic.jpeg',
+  intro: '/wendy houses/WhatsApp Image 2026-11-23 at 8.34.08 PM.jpeg',
+  nutec: '/nutec/nutec cover pic.jpeg',
+  wendy: '/wendy houses/WhatsApp Image 2026-11-23 at 8.34.08 PM.jpeg',
   plumbing: [
     '/images/plumbing1.jpeg',
     '/images/plumbong2.jpeg',
     '/images/plumbing3.jpeg',
     '/images/plumbing4.jpeg',
   ],
-  electrical: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=80',
-  flooring: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80',
-  paving: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80',
-  project1: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1500&q=85',
-  project2: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85',
-  project3: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85',
+  electrical: '/electrical/cover.jpeg',
+  flooring: '/flooring/flooring cover.jpeg',
+  paving: '/paving/WhatsApp Image 2026-11-23 at 8.45.41 PM.jpeg',
+  project1: '/nutec/nutec cover pic.jpeg',
+  project2: '/flooring/flooring cover.jpeg',
+  project3: '/paving/WhatsApp Image 2026-11-23 at 8.45.41 PM.jpeg',
 }
 const services = [
   ['01', 'NUTEC HOUSES', 'Premium Nutec board construction for durable, weather-resistant structures built to last.', photos.nutec, 'nutec-houses'],
@@ -158,10 +158,10 @@ function Hero() {
       <div className="hero-shade" />
       <div className="hero-content">
         <p className="eyebrow eyebrow-light">NUTEC MASTERS / CAPE TOWN</p>
-        <h1 className="hero-title" aria-label="BUILDING SPACES. CREATING POSSIBILITIES.">
-          <TypingLine text="BUILDING SPACES." />
+        <h1 className="hero-title" aria-label="Built with precision, made to last">
+          <TypingLine text="Built with precision," />
           <br />
-          <TypingLine text="CREATING POSSIBILITIES." delay={'BUILDING SPACES.'.length * 0.045} />
+          <TypingLine text="made to last" delay={'Built with precision,'.length * 0.045} />
           <motion.span
             className="hero-cursor"
             aria-hidden="true"
@@ -326,7 +326,7 @@ function Prices() {
       <Reveal>
         <p className="price-note">Prices are starting estimates and may vary depending on dimensions, materials, location and project requirements.</p>
         <div className="price-actions">
-          <motion.a className="button button-dark" href="#contact" whileHover={reduceMotion ? undefined : { y: -2, scale: 1.02 }} whileTap={reduceMotion ? undefined : { scale: 0.97 }}>VIEW FULL PRICE GUIDE</motion.a>
+          <motion.a className="button button-dark" href="/price-guide" whileHover={reduceMotion ? undefined : { y: -2, scale: 1.02 }} whileTap={reduceMotion ? undefined : { scale: 0.97 }}>VIEW FULL PRICE GUIDE</motion.a>
           <motion.a className="button button-outline" href="#contact" whileHover={reduceMotion ? undefined : { y: -2, scale: 1.02 }} whileTap={reduceMotion ? undefined : { scale: 0.97 }}>REQUEST A CUSTOM QUOTE</motion.a>
         </div>
       </Reveal>
@@ -371,7 +371,7 @@ function QuoteForm() {
     const data = new FormData(event.currentTarget)
     const message = [`Hello Nutec Masters, I would like to request a quotation.`, `Name: ${data.get('name')}`, `Phone: ${data.get('phone')}`, `Service: ${data.get('service')}`, `Town / City: ${data.get('town')}`, `Project details: ${data.get('details') || 'Not provided'}`].join('\n')
     setSubmitted(true)
-    window.open(`https://wa.me/27842785134?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer')
+    window.open(`https://wa.me/27751079569?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer')
   }
   return (
     <motion.form
@@ -407,7 +407,7 @@ function Contact() {
           <p>Get in touch with our team for professional Nutec house, Wendy house, plumbing, electrical, flooring, painting and paving services.</p>
           <div className="cta-actions">
             <motion.a href="#contact" className="button button-light" whileHover={reduceMotion ? undefined : { y: -2, scale: 1.02 }} whileTap={reduceMotion ? undefined : { scale: 0.97 }}>GET A FREE QUOTE <span aria-hidden="true">↗</span></motion.a>
-            <motion.a href="tel:+27719012337" className="text-link text-link-light" whileHover={reduceMotion ? undefined : { x: 3 }} whileTap={reduceMotion ? undefined : { scale: 0.98 }}>CONTACT US TODAY <span aria-hidden="true">→</span></motion.a>
+            <motion.a href="tel:+27751079569" className="text-link text-link-light" whileHover={reduceMotion ? undefined : { x: 3 }} whileTap={reduceMotion ? undefined : { scale: 0.98 }}>CONTACT US TODAY <span aria-hidden="true">→</span></motion.a>
           </div>
         </Reveal>
         <motion.div className="cta-number" aria-hidden="true" initial={reduceMotion ? false : { opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: reduceMotion ? 0 : 0.8 }}>GB<span> / </span>01</motion.div>
@@ -417,10 +417,9 @@ function Contact() {
           <p className="eyebrow">GET IN TOUCH</p><h2>Tell us what<br /><em>you have in mind.</em></h2>
           <p>We&apos;ll be in touch to understand your needs and discuss a quote.</p>
           <div className="contact-details">
-            <a href="tel:+27719012337"><small>CALL</small>+27 71 901 2337</a>
-            <a href="https://wa.me/27842785134" target="_blank" rel="noreferrer"><small><WhatsAppIcon />WHATSAPP</small>+27 84 278 5134</a>
-            <a href="https://wa.me/263785013326" target="_blank" rel="noreferrer"><small><WhatsAppIcon />WHATSAPP</small>+263 78 501 3326</a>
-            <a href="mailto:sibandadanzel@gmail.com"><small>EMAIL</small>sibandadanzel@gmail.com</a>
+            <a href="tel:+27751079569"><small>CALL</small>075 107 9569</a>
+            <a href="https://wa.me/27751079569" target="_blank" rel="noreferrer"><small><WhatsAppIcon />WHATSAPP</small>075 107 9569</a>
+            <a href="mailto:nutecmasters1@gmail.com"><small>EMAIL</small>nutecmasters1@gmail.com</a>
           </div>
         </Reveal>
         <QuoteForm />
@@ -430,7 +429,34 @@ function Contact() {
 }
 
 function Footer() {
-  return <footer className="footer"><div className="footer-main"><div className="footer-about"><Brand light /><p>Premium Nutec houses, Wendy houses and property improvement services in Cape Town and across the Western Cape.</p></div><div className="footer-column"><h3>QUICK LINKS</h3>{[...links, ['Privacy Policy', 'mailto:sibandadanzel@gmail.com?subject=Privacy%20Policy%20Enquiry']].map(([label, href]) => <a href={href} key={label}>{label}</a>)}</div><div className="footer-column"><h3>SERVICES</h3>{services.map(([, title, , , slug]) => <Link href={`/${slug}`} key={title}>{title}</Link>)}</div><div className="footer-column footer-contact"><h3>CONTACT</h3><a href="tel:+27719012337">+27 71 901 2337</a><a className="whatsapp-footer-link" href="https://wa.me/27842785134" target="_blank" rel="noreferrer"><WhatsAppIcon />+27 84 278 5134</a><a className="whatsapp-footer-link" href="https://wa.me/263785013326" target="_blank" rel="noreferrer"><WhatsAppIcon />+263 78 501 3326</a><a href="mailto:sibandadanzel@gmail.com">sibandadanzel@gmail.com</a></div></div><div className="footer-bottom"><span>© 2026 Nutec Masters. All rights reserved.</span><span>DESIGNED AND BUILT BY TAKUDZWA MBANO <a href="tel:+919588511784">+919588511784</a> · <a href="mailto:mbanotakudzwa2001@gmail.com">EMAIL</a></span></div></footer>
+  return (
+    <footer className="footer">
+      <div className="footer-main">
+        <div className="footer-about">
+          <Brand light />
+          <p>Premium Nutec houses, Wendy houses and property improvement services in Cape Town and across the Western Cape.</p>
+        </div>
+        <div className="footer-column">
+          <h3>QUICK LINKS</h3>
+          {[...links, ['Privacy Policy', 'mailto:nutecmasters1@gmail.com?subject=Privacy%20Policy%20Enquiry']].map(([label, href]) => <a href={href} key={label}>{label}</a>)}
+        </div>
+        <div className="footer-column">
+          <h3>SERVICES</h3>
+          {services.map(([, title, , , slug]) => <Link href={`/${slug}`} key={title}>{title}</Link>)}
+        </div>
+        <div className="footer-column footer-contact">
+          <h3>CONTACT</h3>
+          <a href="tel:+27751079569">075 107 9569</a>
+          <a className="whatsapp-footer-link" href="https://wa.me/27751079569" target="_blank" rel="noreferrer"><WhatsAppIcon />075 107 9569</a>
+          <a href="mailto:nutecmasters1@gmail.com">nutecmasters1@gmail.com</a>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <span>© 2026 Nutec Masters. All rights reserved.</span>
+        <span>DESIGNED AND BUILT BY TAKUDZWA MBANO <a href="tel:+919588511784">+919588511784</a> · <a href="mailto:mbanotakudzwa2001@gmail.com">EMAIL</a></span>
+      </div>
+    </footer>
+  )
 }
 
 export function GreenbuildHome() {

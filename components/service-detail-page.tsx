@@ -3,6 +3,22 @@ import type { ServicePageContent } from '@/lib/service-pages'
 import { MotionLink, Reveal } from '@/components/motion-primitives'
 import { WhatsAppIcon } from '@/components/whatsapp-icon'
 
+export function ServiceWhyChoose() {
+  return (
+    <section className="service-why-choose">
+      <Reveal className="service-why-card">
+        <h2>Why choose us?</h2>
+        <ul>
+          <li>Experienced local contractors</li>
+          <li>Durable results built for Cape Town conditions</li>
+          <li>Clear communication and on-time delivery</li>
+        </ul>
+        <MotionLink href="/#contact" className="button button-book-consultation">BOOK A CONSULTATION</MotionLink>
+      </Reveal>
+    </section>
+  )
+}
+
 export function ServiceDetailPage({ service }: { service: ServicePageContent }) {
   return (
     <div className="service-detail-page">
@@ -26,7 +42,7 @@ export function ServiceDetailPage({ service }: { service: ServicePageContent }) 
             <p>{service.description}</p>
             <div className="service-detail-actions">
               <MotionLink href="/#contact" className="button button-dark">REQUEST A QUOTE <span aria-hidden="true">↗</span></MotionLink>
-              <Reveal delay={0.18}><a href="tel:+27719012337" className="text-link">CALL +27 71 901 2337 <span aria-hidden="true">→</span></a></Reveal>
+              <Reveal delay={0.18}><a href="tel:+27751079569" className="text-link">CALL 075 107 9569 <span aria-hidden="true">→</span></a></Reveal>
             </div>
           </Reveal>
           <Reveal className="service-detail-image-wrap" delay={0.12}>
@@ -43,6 +59,20 @@ export function ServiceDetailPage({ service }: { service: ServicePageContent }) 
             <ul>{service.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
           </Reveal>
         </section>
+
+        {service.gallery && (
+          <section className="service-detail-gallery" aria-label={`${service.title} project gallery`}>
+            <div className="service-detail-gallery-grid">
+              {service.gallery.map((image, index) => (
+                <Reveal className="service-detail-gallery-item" key={image.src} delay={(index % 6) * 0.04}>
+                  <img src={image.src} alt={image.alt} loading="lazy" />
+                </Reveal>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <ServiceWhyChoose />
 
         <section className="service-detail-contact">
           <Reveal>
@@ -62,7 +92,7 @@ export function ServiceDetailPage({ service }: { service: ServicePageContent }) 
           </span>
         </Link>
         <MotionLink href="/#services">BACK TO ALL SERVICES <span aria-hidden="true">→</span></MotionLink>
-        <a className="whatsapp-footer-link" href="https://wa.me/263785013326" target="_blank" rel="noreferrer"><WhatsAppIcon />+263 78 501 3326</a>
+        <a className="whatsapp-footer-link" href="https://wa.me/27751079569" target="_blank" rel="noreferrer"><WhatsAppIcon />075 107 9569</a>
         <span>© 2026 Nutec Masters. All rights reserved.</span>
       </footer>
     </div>
