@@ -232,10 +232,10 @@ function Services() {
               whileTap={reduceMotion ? undefined : { scale: 0.99 }}
               transition={{ duration: 0.24, ease: 'easeOut' }}
             >
-              <div className={title === 'PLUMBING' ? 'service-image plumbing-gallery' : 'service-image'}>
+              <Link href={`/${slug}`} className={title === 'PLUMBING' ? 'service-image plumbing-gallery' : 'service-image'} aria-label={`View ${title.toLowerCase()} services`}>
                 {images.map((imagePath, index) => <img key={imagePath} src={imagePath} alt={`${title.toLowerCase()} project ${index + 1}`} loading="lazy" />)}
                 <span>{number}</span>
-              </div>
+              </Link>
               <div className="service-info">
                 <h3>{title}</h3>
                 <p>{description}</p>
